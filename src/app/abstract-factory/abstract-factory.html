@@ -1,0 +1,33 @@
+﻿<button (click)="selectPirate()">Pirate</button>
+<button (click)="selectMarine()">Marine</button>
+
+<div *ngIf="showPirateOptions">
+    <button (click)="createPirateFlag()">Create Pirate Flag</button>
+    <button (click)="createPirateCape()">Create Pirate Cape</button>
+    <button (click)="createPirateShip()">Create Pirate Ship</button>
+</div>
+
+<div *ngIf="showMarineOptions">
+    <button (click)="createMarineFlag()">Create Marine Flag</button>
+    <button (click)="createMarineCape()">Create Marine Cape</button>
+    <button (click)="createMarineShip()">Create Marine Ship</button>
+</div>
+
+<div *ngIf="flag === 'PirateFlag'">
+    <img width="100" height="100" src="../../assets/factory-method/Pirate.png" alt="Pirate Flag">
+</div>
+<div *ngIf="flag === 'MarineFlag'">
+    <img width="100" height="100" src="../../assets/factory-method/Marine.svg" alt="Marine Flag">
+</div>
+<div *ngIf="cape === 'PirateCape'">
+    <img width="100" height="100" src="../../assets/abstract-factory/PirateCape.jpg" alt="Pirate Cape">
+</div>
+<div *ngIf="cape === 'MarineCape'">
+    <img width="100" height="100" src="../../assets/abstract-factory/MarineCape.png" alt="Marine Cape">
+</div>
+<div *ngIf="ship === 'PirateShip'">
+    <img width="100" height="100" src="../../assets/abstract-factory/PirateShip.jpg" alt="Pirate Ship">
+</div>
+<div *ngIf="ship === 'MarineShip'">
+    <img width="100" height="100" src="../../assets/abstract-factory/MarineShip.png" alt="Marine Ship">
+</div>

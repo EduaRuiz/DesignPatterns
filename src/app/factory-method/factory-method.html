@@ -1,0 +1,9 @@
+﻿<button (click)="displayPirateFlag()">Display Pirate Flag</button>
+<button (click)="displayMarineFlag()">Display Marine Flag</button>
+<div *ngIf="selectedFlag === 'Pirate'">
+    <img width="100" height="100" src="../../assets/factory-method/Pirate.png" alt="Pirate Flag">
+
+</div>
+<div *ngIf="selectedFlag === 'Marine'">
+    <img width="100" height="100" src="../../assets/factory-method/Marine.svg" alt="Marine Flag">
+</div>

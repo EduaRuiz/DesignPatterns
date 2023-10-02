@@ -1,0 +1,30 @@
+﻿<div>
+    <h2>Character Form</h2>
+    <form (ngSubmit)="submitForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required>
+
+        <label for=" lastName">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" [(ngModel)]="age" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" [(ngModel)]="gender" name="gender" required>
+
+        <label for="ability">Ability:</label>
+        <input type="text" id="ability" [(ngModel)]="ability" name="ability" required>
+
+        <button type="submit">Create Character</button>
+    </form>
+
+    <div *ngIf="characterCreated">
+        <h2>Character Details:</h2>
+        <p>First Name: {{ character.firstName }}</p>
+        <p>Last Name: {{ character.lastName }}</p>
+        <p>Age: {{ character.age }}</p>
+        <p>Gender: {{ character.gender }}</p>
+        <p>Ability: {{ character.ability }}</p>
+    </div>
+</div>
