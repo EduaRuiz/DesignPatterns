@@ -21,6 +21,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),
   },
+  {
+    path: 'prototype',
+    loadChildren: () =>
+      import('./prototype/prototype.module').then((m) => m.PrototypeModule),
+  },
+  {
+    path: 'singleton',
+    loadChildren: () =>
+      import('./singleton/singleton.module').then((m) => m.SingletonModule),
+  },
   // {
   //   path: 'adapter',
   //   loadChildren: () =>

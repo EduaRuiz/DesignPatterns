@@ -1,0 +1,16 @@
+﻿<div>
+    <button (click)="addFruit()">Agregar Fruta</button>
+    <button (click)="cloneFruit()">Clonar Última Fruta</button>
+</div>
+
+<div *ngFor="let fruit of fruits">
+    <div style="margin: 10px;">
+        <!-- <img [src]="getFruitImage(fruit)" alt="Fruit Image" /> -->
+        <div>
+            <strong>Nombre:</strong> {{ fruit.name }}
+        </div>
+        <div>
+            <strong>Tipo:</strong> {{ fruit.type }}
+        </div>
+    </div>
+</div>
