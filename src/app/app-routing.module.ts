@@ -31,16 +31,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./singleton/singleton.module').then((m) => m.SingletonModule),
   },
-  // {
-  //   path: 'adapter',
-  //   loadChildren: () =>
-  //     import('./adapter/adapter.module').then((m) => m.AdapterModule),
-  // },
-  // {
-  //   path: 'bridge',
-  //   loadChildren: () =>
-  //     import('./bridge/bridge.module').then((m) => m.BridgeModule),
-  // },
+  {
+    path: 'adapter',
+    loadChildren: () =>
+      import('./adapter/adapter.module').then((m) => m.AdapterModule),
+  },
+  {
+    path: 'bridge',
+    loadChildren: () =>
+      import('./bridge/bridge.module').then((m) => m.BridgeModule),
+  },
   // {
   //   path: 'chain-of-responsibility',
   //   loadChildren: () =>

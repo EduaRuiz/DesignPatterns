@@ -1,5 +1,4 @@
 ﻿import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AbstractFactoryComponent } from './abstract-factory';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
