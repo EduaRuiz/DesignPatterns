@@ -5,78 +5,100 @@ const routes: Routes = [
   {
     path: 'factory-method',
     loadChildren: () =>
-      import('./factory-method/factory-method.module').then(
+      import('./Creational-Patterns/factory-method/factory-method.module').then(
         (m) => m.FactoryMethodModule
       ),
   },
   {
     path: 'abstract-factory',
     loadChildren: () =>
-      import('./abstract-factory/abstract-factory.module').then(
-        (m) => m.AbstractFactoryModule
-      ),
+      import(
+        './Creational-Patterns/abstract-factory/abstract-factory.module'
+      ).then((m) => m.AbstractFactoryModule),
   },
   {
     path: 'builder',
     loadChildren: () =>
-      import('./builder/builder.module').then((m) => m.BuilderModule),
+      import('./Creational-Patterns/builder/builder.module').then(
+        (m) => m.BuilderModule
+      ),
   },
   {
     path: 'prototype',
     loadChildren: () =>
-      import('./prototype/prototype.module').then((m) => m.PrototypeModule),
+      import('./Creational-Patterns/prototype/prototype.module').then(
+        (m) => m.PrototypeModule
+      ),
   },
   {
     path: 'singleton',
     loadChildren: () =>
-      import('./singleton/singleton.module').then((m) => m.SingletonModule),
+      import('./Creational-Patterns/singleton/singleton.module').then(
+        (m) => m.SingletonModule
+      ),
   },
   {
     path: 'adapter',
     loadChildren: () =>
-      import('./adapter/adapter.module').then((m) => m.AdapterModule),
+      import('./Structural-Patterns/adapter/adapter.module').then(
+        (m) => m.AdapterModule
+      ),
   },
   {
     path: 'bridge',
     loadChildren: () =>
-      import('./bridge/bridge.module').then((m) => m.BridgeModule),
+      import('./Structural-Patterns/bridge/bridge.module').then(
+        (m) => m.BridgeModule
+      ),
   },
   {
     path: 'composite',
     loadChildren: () =>
-      import('./composite/composite.module').then((m) => m.CompositeModule),
+      import('./Structural-Patterns/composite/composite.module').then(
+        (m) => m.CompositeModule
+      ),
   },
   {
     path: 'decorator',
     loadChildren: () =>
-      import('./decorator/decorator.module').then((m) => m.DecoratorModule),
+      import('./Structural-Patterns/decorator/decorator.module').then(
+        (m) => m.DecoratorModule
+      ),
   },
   {
     path: 'facade',
     loadChildren: () =>
-      import('./facade/facade.module').then((m) => m.FacadeModule),
+      import('./Structural-Patterns/facade/facade.module').then(
+        (m) => m.FacadeModule
+      ),
   },
   {
     path: 'flyweight',
     loadChildren: () =>
-      import('./flyweight/flyweight.module').then((m) => m.FlyweightModule),
+      import('./Structural-Patterns/flyweight/flyweight.module').then(
+        (m) => m.FlyweightModule
+      ),
   },
   {
     path: 'proxy',
     loadChildren: () =>
-      import('./proxy/proxy.module').then((m) => m.ProxyModule),
+      import('./Structural-Patterns/proxy/proxy.module').then(
+        (m) => m.ProxyModule
+      ),
   },
   {
     path: 'chain-of-responsibility',
     loadChildren: () =>
-      import('./chain-of-responsibility/chain-of-responsibility.module').then(
-        (m) => m.ChainOfResponsibilityModule
-      ),
+      import(
+        './Behavioral-Patterns/chain-of-responsibility/chain-of-responsibility.module'
+      ).then((m) => m.ChainOfResponsibilityModule),
   },
   {
     path: 'command',
     loadChildren: () =>
-      import('./command/command.module').then((m) => m.CommandModule),
+      import('./Behavioral-Patterns/command/command.module').then(
+        (m) => m.CommandModule
+      ),
   },
 ];
 
