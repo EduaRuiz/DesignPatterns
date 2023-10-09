@@ -1,0 +1,24 @@
+﻿<div>
+    <button (click)="createPirates()">crear piratas</button>
+    <button (click)="show()">Get Info</button>
+</div>
+
+<div *ngFor="let pirate of pirates">
+    <div style="margin: 10px;">
+        <div>
+            <strong>Hola!:</strong> {{ pirate.showInfo() }} Tengo una fruta que {{pirate.useDevilFruitAbility()}} Quien
+            soy?
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="showInfo">
+    <div *ngFor="let pirate of pirates">
+        <div style="margin: 10px;">
+            <div>
+                <strong>Sí!, </strong> soy {{ pirate.getName() }}
+            </div>
+
+        </div>
+    </div>

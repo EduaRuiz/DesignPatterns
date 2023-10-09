@@ -1,0 +1,6 @@
+﻿<div>
+    <label for="marineRank">Rango del Marine:</label>
+    <input id="marineRank" [(ngModel)]="marineRank" />
+    <button (click)="calculateBounty()">Calcular Recompensa</button>
+    <p *ngIf="bounty">Recompensa del pirata: {{ bounty }}</p>
+</div>

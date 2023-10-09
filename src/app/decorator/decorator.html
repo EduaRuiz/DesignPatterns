@@ -1,0 +1,11 @@
+﻿<div>
+    <h2>Personalizar Pirata</h2>
+    <button (click)="selectHaki()">Añadir Haki</button>
+    <button (click)="selectDevilFruit()">Añadir Fruta del Diablo</button>
+    <button (click)="resetSelection()">Restablecer</button>
+
+    <div *ngIf="selectedPirate">
+        <h3>Ataque: {{ selectedPirate.attack() }}</h3>
+        <h3>Nivel de Poder: {{ selectedPirate.powerLevel() }}</h3>
+    </div>
+</div>
