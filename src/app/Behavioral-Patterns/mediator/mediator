@@ -1,0 +1,36 @@
+﻿interface Mediator {
+  notify(sender: Character, event: string): void;
+}
+
+class Character {
+  private name: string;
+  private mediator: Mediator;
+  constructor(name: string, mediator: Mediator) {
+    this.name = name;
+    this.mediator = mediator;
+  }
+
+  public getName(): string {
+    return this.name;
+  }
+
+  public attack(target: Character): void {
+    console.log(`${this.name} attacks ${target.getName()}`);
+    this.mediator.notify(this, "attack");
+  }
+}
+
+class DevilFruitMediator implements Mediator {
+  public notify(sender: Character, event: string): void {
+    if (event === "attack") {
+      console.log(`${sender.getName()}'s Devil Fruit power activated!`);
+    }
+  }
+}
+
+const mediator: Mediator = new DevilFruitMediator();
+
+const luffy: Character = new Character("Luffy", mediator);
+const zoro: Character = new Character("Zoro", mediator);
+
+luffy.attack(zoro);

@@ -1,19 +1,12 @@
 <div class="navbar">
-    <a routerLink="/factory-method">Factory Method</a>
-    <a routerLink="/abstract-factory">Abstract Factory</a>
-    <a routerLink="/builder">Builder</a>
-    <a routerLink="/prototype">Prototype</a>
-    <a routerLink="/singleton">Singleton</a>
-    <a routerLink="/adapter">Adapter</a>
-    <a routerLink="/bridge">Bridge</a>
-    <a routerLink="/composite">Composite</a>
-    <a routerLink="/decorator">Decorator</a>
-    <a routerLink="/facade">Facade</a>
-    <a routerLink="/flyweight">Flyweight</a>
-    <a routerLink="/proxy">Proxy</a>
-    <a routerLink="/chain-of-responsibility">Chain of Responsibility</a>
-    <a routerLink="/command">Command</a>
+    <select #creationalDropdown (change)="navigateToPattern(creationalDropdown.value)">
+        <option *ngFor="let pattern of creationalPatterns" [value]="pattern.route">{{ pattern.name }}</option>
+    </select>
+    <select #structuralDropdown (change)="navigateToPattern(structuralDropdown.value)">
+        <option *ngFor="let pattern of structuralPatterns" [value]="pattern.route">{{ pattern.name }}</option>
+    </select>
+    <select #behavioralDropdown (change)="navigateToPattern(behavioralDropdown.value)">
+        <option *ngFor="let pattern of behavioralPatterns" [value]="pattern.route">{{ pattern.name }}</option>
+    </select>
 </div>
-
-<router-outlet>
-</router-outlet>
+<router-outlet></router-outlet>
